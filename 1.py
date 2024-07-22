@@ -1,5 +1,10 @@
 #print("бнхх тютр, аошч ж сжп рзфал")
 #print("ти Клоуторн? Wow")
+# print("sdsd")
+# "sdsdsd"
+# print("abc")
+# name = input("abc")
+
 
 
 #a = 5 > 3 ? "hoho" : "hehe"
@@ -7,7 +12,9 @@
 #print(name)
 alphabet = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
 message = "бнхх тютр, аошч ж сжп рзфал"
-key = 1
+# key = 1
+key = input("Введіть ключ: ")
+key = int(key)
 result = ""
 
 '''
@@ -31,3 +38,4 @@ for letter in message: #беру першу букву у повідмленні
   #print(letter, '|', x,'|', y,'|', z,'|', result, '|')
 print(message)
 print(result)
+
