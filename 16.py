@@ -10,10 +10,11 @@ key = "victory"
 while True:
   if attempts == 4:
     key = "crown"
-    line = "Almighty _____ of victory"
+    line = "Almighty _____ of victory "
   if attempts == 7:
     key = "ground"
-    line = "Crash into the ______ but at least the nightmare ends"
+    line = "Crash into the ______ but at least the nightmare ends "
+  # TODO: Else you are looser
 
   attempts += 1
   
