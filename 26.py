@@ -5,7 +5,7 @@ import pygame
 
 pygame.init()
 pygame.mixer.init()
-sound = pygame.mixer.Sound('hollow.wav')
+sound = pygame.mixer.Sound('Boss Battle 1.wav')
 sound.play()
 
 def pause():
@@ -13,9 +13,17 @@ def pause():
 
 pause()
 
-def play():
+def play(x):
   # Play the sound
-  pygame.mixer.unpause()
+  pygame.mixer.pause()
+  if x == "1" :
+    sound = pygame.mixer.Sound('Boss Battle 1.wav')
+    sound.play()
+  if x == "2":
+    sound = pygame.mixer.Sound('S23-19 ACTION LOOP.wav')
+    sound.play()
+  
+  #pygame.mixer.unpause()
   #while True:
     # Start taking user input and doing something with it
   #  input()
@@ -27,8 +35,9 @@ while True:
   
   menu = """🎵 MyPOD Music Player
 
-Press 1 to Play
-Press 2 to Exit
+Press 0 to Exit
+Press 1 to Play Boss Battle
+Press 2 to Play Action Loop
 
 Press anything else to see the menu again.
   """
@@ -40,10 +49,12 @@ Press anything else to see the menu again.
   
   # check whether you should call the play() subroutine depending on user's input
   if x == "1" :
-    play()
-  elif x == "2":
+    play(x)
+  elif x == "0":
     os.system("clear")
     print(menu)
     exit()
+  elif x == "2":
+    play(x)
   else:
     os.system("clear")
